@@ -1,0 +1,32 @@
+{% set vince_img = url_for('static', filename='images/vince.jpg') %}
+{% extends 'base.html' %}
+
+{% block title %} Youtube Search {% endblock %}
+{%block body %}
+
+{% with query_value=query %}
+    {% include 'searchbar.html' %}
+{% endwith %}
+
+
+<div container>
+    <div class="row">
+        {% for video in videos %}
+        <div class="col-md-4">
+            <div class="card mb-4  shadow-sm">
+                <img class="card-img-top" width="100%" height="240" src="{{ video['img_url'] }}" focusable="false" role="img">
+                <div class="card-body">
+                    <p class="card-text">{{ video['title'] }}</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <a class="btn btn-sm btn-custom" type="button" href="{{ video['url'] }}">View</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

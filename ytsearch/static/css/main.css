@@ -1,0 +1,120 @@
+html{
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color:  rgb(67, 86, 105);
+    color: rgb(145, 159, 175);
+}
+body, input, button { 
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+.navbar-custom{
+    background-color: #00dead !important;
+}
+
+#button-container{
+    width: 50%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+#button-container div{
+    height: 25px;
+    width: 10em;
+    float: left;
+    margin-right: 1px;
+    margin-top: 20px;
+}
+
+#navbar button{
+    height: 22px;
+    font-size: 1.5vw;
+    text-align: left;
+    text-transform: uppercase;
+    background: none;
+    border: none;
+    outline: none;
+    color: whitesmoke;
+}
+
+#navbar button:hover{
+    transition: all 0.5s ease;
+    font-size: 23px;
+    color: grey;
+}
+
+#body{
+    text-align: center;
+    margin: auto;
+    height: 100vw;
+}
+
+#main{
+    width: 80%;
+    margin: 0 auto;
+    border: 0px;
+}
+
+#flashes{
+    background-color: rgb(212, 67, 67);
+    color: white;
+    width: 100%;
+    height: 25px;
+}
+
+#flashes li{
+    list-style-type: none;
+}
+
+#header-comments{
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.registerform-text{
+    text-align: left;
+    color: whitesmoke;
+}
+
+.registerform-button{
+    background: none;
+    text-transform: uppercase;
+    font-size: 23px;
+    border: 2px;
+    outline: none;
+    color: whitesmoke;
+}
+
+.registerform-button:hover{
+    transition: all 0.5s ease;
+    color: #00dead;
+}
+
+#icon:hover{
+    transition: all 1s ease;
+    transform:  scale(1.2);
+}
+
+#search-bar{
+    padding: 25px;
+}
+
+#search-bar input{
+    width: 70vw;
+    height: 40px;
+    border-radius: 5px;
+    margin-bottom: 7px;
+    text-align: center;
+}
+
+#search-bar button{
+    width: 30vw;
+    border-radius: 5px;
+}
+

@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block title %} Flask {% endblock %}
+
+
+{% block body %}
+
+    <div id="register">
+        <form action="/register" method="post" novalidate>
+            {{ form.hidden_tag() }}
+            <p>
+                {{ form.username.label(class_="registerform-text") }} </br>
+                {{ form.username(size=32) }} </br>
+                {% for error in form.username.errors %}
+                    <span class="error"> {{ error }} </span>
+                {% endfor %}
+            </p>
+            <p>
+                {{ form.email.label(class_="registerform-text") }} </br>
+                {{ form.email(size=32) }} </br>
+                {% for error in form.email.errors %}
+                    <span class="error"> {{ error }} </span>
+                {% endfor %}
+            </p>
+            <p>
+                {{ form.password.label(class_="registerform-text") }} </br>
+                {{ form.password(size=32) }} </br>
+                {% for error in form.password.errors %}
+                 <span class="error"> {{ error }} </span>
+                {% endfor %}
+            </p>
+            <p>
+                {{ form.password2.label(class_="registerform-text") }} </br>
+                {{ form.password2(size=32) }} </br>
+                {% for error in form.password2.errors %}
+                    <span class="error"> {{ error }} </span>
+                {% endfor %}
+            </p>
+            <p> {{ form.submit(class_="registerform-button") }}</p>
+        </form>
+    </div>
+
+{% endblock %}

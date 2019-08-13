@@ -1,0 +1,12 @@
+<div id="search-bar">
+        <form action='/query_mock' method='get'>
+            
+            {% if query_value is defined %}
+            <input type="text" value="{{query_value}}" name='query'> </br>
+            {% else %}
+            <input type="text" placeholder="Your query here..." name='query'> </br>
+            {% endif %}
+
+            <button type="submit"> Submit </button>
+        </form>
+</div>
