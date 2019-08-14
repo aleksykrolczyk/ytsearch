@@ -7,8 +7,10 @@ To install simply use pip:
 
     pip install -r requirements.txt
 
+It is also possible (in case of errors connected to webscrapping) that You will need to run `Install Certificates.command` from Your Python directory.
+
 ## Database
-Simply run these two commands:
+Simply run these three commands:
 
     flask db init
     flask db migrate
