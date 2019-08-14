@@ -1,4 +1,5 @@
 from flask import render_template, request, Blueprint
+from ytsearch.addons.scraper import get_videos
 
 main_bp = Blueprint('main', __name__)
 
@@ -7,6 +8,13 @@ main_bp = Blueprint('main', __name__)
 @main_bp.route('/homepage')
 def homepage():
     return render_template('homepage.html')
+
+
+@main_bp.route('/query', methods=['GET'])
+def query():
+    query = request.args['query']
+    videos = get_videos(query=query)
+    return render_template('search.html', query=query, videos=videos)
 
 
 @main_bp.route('/query_mock', methods=['GET'])
