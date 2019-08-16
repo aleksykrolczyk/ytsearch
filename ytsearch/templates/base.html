@@ -51,6 +51,14 @@
                     {% else %}
                     <li class="nav-item">
                         <div>
+                            <form action="/history" method="get" class="navbar-form">
+                                <button class="btn btn-outline-secondary mr-1" type="submit"> History </button>
+                            </form>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <div>
                             <form action="/logout" method="get" class="navbar-form">
                                 <button class="btn btn-outline-secondary mr-1" type="submit"> Logout </button>
                             </form>

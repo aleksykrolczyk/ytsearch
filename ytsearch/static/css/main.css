@@ -8,9 +8,14 @@ body {
     padding: 0;
     background-color:  rgb(67, 86, 105);
     color: rgb(145, 159, 175);
-}
-body, input, button { 
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+input{ 
+    outline: none;
+}
+
+button:focus{
+    outline: none;
 }
 
 
@@ -39,7 +44,6 @@ body, input, button {
     text-transform: uppercase;
     background: none;
     border: none;
-    outline: none;
     color: whitesmoke;
 }
 
@@ -90,7 +94,6 @@ body, input, button {
     text-transform: uppercase;
     font-size: 23px;
     border: 3px;
-    outline: none;
     color: whitesmoke;
 }
 
@@ -102,14 +105,14 @@ body, input, button {
 .text-above{
     margin-left: auto;
     margin-right: auto;
-    width: 270px;
+    width: 277px;
     text-align: left;
 }
 
 .button-below{
     margin-left: auto;
     margin-right: auto;
-    width: 270px;
+    width: 280px;
     text-align: right;
 }
 
@@ -135,3 +138,19 @@ body, input, button {
     border-radius: 5px;
 }
 
+#search-bar button:hover{
+    transition: all 1s ease;
+    filter: brightness(95%);
+}
+
+.card-button{
+    width: 85%
+}
+
+.card-time{
+    display: inline;
+}
+
+.btn-custom{
+    width: 90%;
+}

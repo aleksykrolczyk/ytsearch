@@ -18,8 +18,11 @@
                 <div class="card-body">
                     <p class="card-text">{{ video['title'] }}</p>
                     <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-                            <a class="btn btn-sm btn-custom" type="button" href="{{ video['video_url'] }}">View</a>
+                        <div class='card-button'>
+                            <a class="btn btn-custom" type="button" href="{{ video['video_url'] }}">View</a>
+                        </div>
+                        <div class='card-time'>
+                            {{ video['length'] }}
                         </div>
                     </div>
                 </div>

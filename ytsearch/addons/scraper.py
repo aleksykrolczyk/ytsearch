@@ -2,12 +2,13 @@ import requests
 from bs4 import BeautifulSoup
 
 
-def get_videos(query='rick astley', n=9):
+def get_videos(query, n=9):
 
     base_url = 'https://m.youtube.com/results?search_query='
     page = requests.get(base_url + query)
     soup = BeautifulSoup(page.content, 'html.parser')
-    divs = soup.select('div.yt-lockup-dismissable:not(:has(ol.yt-lockup-playlist-items))')[:n]
+    divs = soup.select(
+        'div.yt-lockup-dismissable:not(:has(ol.yt-lockup-playlist-items))')[:n]
 
     # example img url: https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg
     # example video url: https://www.youtube.com/watch?v=dQw4w9WgXcQ
