@@ -27,6 +27,9 @@ class User(UserMixin, db.Model):
         query = Query(user_id=self.id, content=query)
         db.session.add(query)
         db.session.commit()
+        
+    def get_queries(self):
+        return self.queries
 
 
 @login_manager.user_loader

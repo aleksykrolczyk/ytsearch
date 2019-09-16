@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %} Your history {% endblock %}
+
+{% block body %}
+ <div id="history">
+    {% for query in current_user.queries %}
+        <div>
+            <div class="history-index">{{loop.index}}.</div>
+            <div class="history-text">{{ query.content }}</div>
+            <div class="history-date">{{ query.date }}</div>
+        </div>
+    {% endfor%}
+ </div>
+{% endblock %}

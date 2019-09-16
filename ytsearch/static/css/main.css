@@ -7,7 +7,7 @@ body {
     margin: 0;
     padding: 0;
     background-color:  rgb(67, 86, 105);
-    color: rgb(145, 159, 175);
+    color: black;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 input{ 
@@ -153,4 +153,30 @@ button:focus{
 
 .btn-custom{
     width: 90%;
+}
+
+#history div{
+    font-size: 26px;
+    text-align: left;
+    display: flex;
+}
+
+#history>div:nth-child(odd){
+    background-color: #587089;
+}
+
+.history-index{
+    display: inline-block;
+    width: 6%;
+}
+
+.history-text{
+    display: inline-block;
+    width: 64%;
+}
+
+.history-date{
+    display: inline-block;
+    text-align: right;
+    width: 30%;
 }

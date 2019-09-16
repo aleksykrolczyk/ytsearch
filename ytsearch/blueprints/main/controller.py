@@ -1,4 +1,4 @@
-from flask import render_template, request, Blueprint
+from flask import render_template, request, Blueprint, jsonify
 from ytsearch.addons.scraper import get_videos
 from flask_login import current_user
 
@@ -21,3 +21,9 @@ def query():
     if current_user.is_authenticated:
         current_user.add_query(query)
     return render_template('search.html', query=query, videos=videos)
+
+
+@main_bp.route('/history')
+def history():
+    return render_template('history.html')
+        

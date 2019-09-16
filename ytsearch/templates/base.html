@@ -32,9 +32,16 @@
             <div id="menu" class="collapse navbar-collapse">       
                     
                 <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <div>
+                            <form action="/homepage" method="get" class="navbar-form">
+                                <button class="btn btn-outline-secondary mr-1" type="submit"> Homepage </button>
+                            </form>
+                        </div>
+                    </li>
                     {%  if current_user.is_anonymous %}
                     <li class="nav-item">
-                        <div class="f">
+                        <div>
                             <form action="/register" method="get" class="navbar-form">
                                 <button class="btn btn-outline-secondary mr-1" type="submit"> Register </button>
                             </form>
